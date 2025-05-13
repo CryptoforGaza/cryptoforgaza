@@ -81,10 +81,10 @@
     }
 
     document.addEventListener("DOMContentLoaded", async () => {
-      const startTime = new Date("2025-05-13T00:00:00Z").getTime();
+      const startTime = new Date("2025-05-14T00:00:00Z").getTime();
       const now = new Date().getTime();
       const hoursPassed = Math.floor((now - startTime) / (1000 * 60 * 60));
-      const donationAmountBtc = (hoursPassed * 0.0001).toFixed(8); // simulate BTC growth
+      const donationAmountBtc = (hoursPassed * 0.00005).toFixed(8); // simulate BTC growth
 
       const btcToUsdRate = await fetchBtcToUsdRate();
       const donationInUsd = (donationAmountBtc * btcToUsdRate).toFixed(2);
